@@ -45,9 +45,13 @@
   padding: 4px;
   margin-bottom: 20px;
   overflow-x: auto;
-  margin-top: auto;
   background-color: rgba(110, 91, 80, 0.48);
   backdrop-filter: blur(4px);
+}
+
+.gesture-area {
+  height: calc(100% - 180px);
+  width: 100%;
 }
 
 .thumbnail {

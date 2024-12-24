@@ -1,8 +1,9 @@
 import { CSSProperties, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useSwipeable } from 'react-swipeable';
 import { Button, Typography } from '../../../../../components';
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import { IoIosArrowBack } from 'react-icons/io';
-import { useSwipeable } from 'react-swipeable';
 import './styles.scss';
 
 const images = [
@@ -19,6 +20,8 @@ const images = [
 ];
 
 export const CityOfferDetail = () => {
+  const navigate = useNavigate();
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFavorite, setIsFavorite] = useState(false);
 
@@ -84,18 +87,13 @@ export const CityOfferDetail = () => {
   };
 
   return (
-    <div
-      className="story-view-container"
-      style={dynamicStyle}
-      {...swipeHandlers}
-      onClick={handleImageClick}
-    >
+    <div className="story-view-container" style={dynamicStyle}>
       <div className="story-header">
         <Button
           type="icon"
           icon={<IoIosArrowBack />}
           className="navigate-button"
-          onClick={handlePrevious}
+          onClick={() => navigate('/city-offer')}
         />
 
         <Typography variant="h6-2" customClassName="story-title">
@@ -115,6 +113,12 @@ export const CityOfferDetail = () => {
           className="favorite-button"
         />
       </div>
+
+      <div
+        className="gesture-area"
+        {...swipeHandlers}
+        onClick={handleImageClick}
+      />
 
       <div className="story-thumbnails">
         {thumbnails.map((image, index) => {
