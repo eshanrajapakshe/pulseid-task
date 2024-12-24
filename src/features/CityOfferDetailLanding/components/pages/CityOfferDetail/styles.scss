@@ -1,0 +1,110 @@
+.story-view-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #000;
+  color: #fff;
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(
+      to bottom,
+      rgb(245 246 252 / 13%),
+      rgb(0 0 0)
+    ),
+    var(--img);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 16px;
+}
+
+.story-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.favorite-button {
+  background: rgba(110, 110, 110, 1) !important;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.story-title {
+  font-weight: 500;
+  margin: 0;
+}
+
+.story-thumbnails {
+  display: flex;
+  align-items: flex-start;
+  border-radius: 8px;
+  gap: 8px;
+  padding: 4px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  margin-top: auto;
+  background-color: rgba(110, 91, 80, 0.48);
+  backdrop-filter: blur(4px);
+}
+
+.thumbnail {
+  height: 50px;
+  width: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.active-thumbnail {
+  border: 2px solid #ffffff;
+}
+
+.more-thumbnails {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 1);
+  height: 50px;
+  width: 50px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(96, 89, 84, 0.48);
+}
+
+.story-description {
+  .merchant-info {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+    img {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1.35px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.2s ease;
+    }
+
+    .merchant-name {
+      margin: 0;
+      font-weight: 600;
+      color: #ffffff;
+    }
+  }
+
+  .discount-details {
+    margin: 12px 0 0;
+    font-size: 12px;
+    font-weight: 400;
+
+    strong {
+      font-weight: 700;
+    }
+  }
+}

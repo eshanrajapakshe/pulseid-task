@@ -1,0 +1,31 @@
+@use './styles/fonts';
+@use './styles/shadow';
+@use './styles/breakpoints';
+@import './styles/colors';
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #000000;
+  font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navigate-button {
+  background-color: #ffffff !important;
+  font-size: 24px;
+  width: 36px;
+  height: 36px;
+  color: $yellow-1;
+
+  &:hover {
+    background-color: $yellow-3 !important;
+  }
+}

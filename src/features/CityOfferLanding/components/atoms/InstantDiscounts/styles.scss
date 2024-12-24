@@ -1,0 +1,105 @@
+.instant-discounts-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  column-gap: 16px;
+  padding: 0 16px;
+
+  .instant-discounts-item {
+    width: calc(100% / 2 - 8px);
+
+    .instant-discounts-tile {
+      min-height: 162px;
+      border-radius: 12px;
+      background-image: linear-gradient(
+          to bottom,
+          rgba(245, 246, 252, 0),
+          rgba(0, 0, 0, 0.8)
+        ),
+        var(--img);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column-reverse;
+      padding: 10px;
+      transition: all 0.2s ease;
+
+      .add-favorite {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        z-index: 1;
+
+        button {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          font-size: 14px;
+          padding: 10px 10px 0 0;
+        }
+      }
+
+      .merchant-info-wrapper {
+        flex: 1;
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+        cursor: pointer;
+      }
+
+      .merchant-info {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 1.35px solid rgba(255, 255, 255, 0.2);
+          transition: all 0.2s ease;
+        }
+
+        .merchant-name {
+          color: #ffffff;
+          font-size: 10px;
+          font-weight: 500;
+        }
+      }
+
+      &:hover {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(245, 246, 252, 0),
+            rgba(0, 0, 0, 0.9)
+          ),
+          var(--img);
+
+        .merchant-info {
+          img {
+            border: 1.35px solid rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
+    }
+
+    .discount-description {
+      margin: 8px 0;
+    }
+
+    .product-types {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+
+      .badge.badge-secondary {
+        color: #ffffff;
+        background-color: rgba(255, 203, 127, 1);
+      }
+    }
+  }
+}

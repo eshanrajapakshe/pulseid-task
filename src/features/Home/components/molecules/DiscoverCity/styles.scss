@@ -1,0 +1,59 @@
+@import '../../../../../styles/colors';
+
+.discover-city-wrapper {
+  margin: 24px 0;
+  padding: 0 16px;
+
+  .discover-city-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    .discover-city-title {
+        margin: 0;
+    }
+  }
+
+  .discover-city-carousel {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    margin-right: -16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    .circle-image-frame > p {
+      margin: 8px 0 0 0;
+      text-align: center;
+      color: $gray-2;
+      font-weight: 500;
+    }
+  }
+
+  .discover-city-carousel > div {
+    scroll-snap-align: start;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 3px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $white;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $gray-300;
+    border-radius: 9px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: $gray-400;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: $gray-500;
+  }
+}

@@ -1,0 +1,48 @@
+@import '../../../styles/colors';
+
+.badge {
+  display: inline-block;
+  padding: 7px 8px;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 32px;
+  width: fit-content;
+}
+
+.badge-primary {
+  color: #fff;
+  background-color: $yellow-1;
+}
+
+.badge-secondary {
+  color: $yellow-1;
+  background-color: $yellow-3;
+}
+
+.badge-outline {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  border: 0.5px solid #ffffff;
+}
+
+.badge-icon-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 24px;
+  padding: 4px 8px;
+
+  span {
+    svg {
+      font-size: 14px;
+    }
+  }
+
+  .badge-text {
+    margin-bottom: -1.5px;
+  }
+}

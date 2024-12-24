@@ -1,0 +1,61 @@
+@import '../../../../../styles/colors';
+
+.offer-slider-wrapper {
+  margin-bottom: calc(24px + 15px);
+
+  .slick-dots {
+    bottom: -15px;
+
+    li {
+      margin: 0;
+      width: 13px;
+    }
+
+    li.slick-active button {
+      padding: 0;
+
+      &:before {
+        opacity: 1;
+        color: $yellow-1;
+      }
+    }
+  }
+
+  .slick-slide {
+    display: block;
+    padding: 16px;
+  }
+
+  .city-offer-card {
+    .offer-provider {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+
+      img {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .offer-provider-name {
+        margin: 0;
+        padding: 0;
+        color: #000000;
+        font-size: 10px;
+        font-weight: 300;
+      }
+    }
+
+    .offer-card-description {
+      margin-bottom: 0;
+      line-height: 20px;
+    }
+
+    .offer-card-button {
+      margin-top: 16px;
+    }
+  }
+}

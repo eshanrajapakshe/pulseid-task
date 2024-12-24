@@ -1,0 +1,33 @@
+@import '../../../../../styles/colors';
+
+.special-offer-wrapper {
+  margin-top: 24px;
+  padding: 0 16px;
+
+  .special-offer-title {
+    margin-bottom: 16px;
+  }
+
+  .special-offer-card {
+    display: flex;
+    justify-content: space-between;
+
+    .special-offer-content {
+      width: 44%;
+
+      .offer-card-title {
+        margin-top: 11px;
+        margin-bottom: 12px;
+      }
+
+      .offer-card-description {
+        color: $gray-2;
+        margin: 0 0 24px;
+      }
+    }
+
+    .special-offer-image {
+      width: 40%;
+    }
+  }
+}

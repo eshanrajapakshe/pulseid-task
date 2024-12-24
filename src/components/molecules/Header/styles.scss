@@ -1,0 +1,54 @@
+@import '../../../styles/colors';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  background: rgb(255, 152, 0);
+  background: radial-gradient(
+    circle,
+    rgb(255 152 0 / 30%) 50%,
+    rgba(255, 152, 0, 0.18) 100%
+  );
+
+  .brand-wrapper {
+    height: 28px;
+    width: auto;
+
+    .logo-img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .user-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .user-info {
+      text-align: right;
+
+      .user-name {
+        margin: 0 0 4px 0;
+        padding: 0;
+        font-weight: 500;
+        color: $black;
+      }
+
+      .user-greetings {
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
+        color: $beige-1;
+      }
+    }
+  }
+}
