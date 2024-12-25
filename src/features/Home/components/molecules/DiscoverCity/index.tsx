@@ -4,10 +4,14 @@ import {
   CircularImageFrame,
   Typography,
 } from '../../../../../components';
+import { RootState } from '../../../../../redux/store';
+import { useSelector } from 'react-redux';
 import './styles.scss';
 
 export const DiscoverCity = () => {
   const navigate = useNavigate();
+
+  const { cities } = useSelector((state: RootState) => state.discover);
 
   return (
     <div className="discover-city-wrapper">
@@ -20,53 +24,15 @@ export const DiscoverCity = () => {
       </div>
 
       <div className="discover-city-carousel">
-        <CircularImageFrame
-          frameSize="medium"
-          imageScource="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
-          frameText="New York"
-          onClick={() => navigate('/city-offer')}
-        />
-        <CircularImageFrame
-          frameSize="medium"
-          imageScource="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
-          frameText="New York"
-        />
-        <CircularImageFrame
-          frameSize="medium"
-          imageScource="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
-          frameText="New York"
-        />
-
-        <CircularImageFrame
-          frameSize="medium"
-          imageScource="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
-          frameText="New York"
-        />
-        <CircularImageFrame
-          frameSize="medium"
-          imageScource="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
-          frameText="New York"
-        />
-        <CircularImageFrame
-          frameSize="medium"
-          imageScource="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
-          frameText="New York"
-        />
-        <CircularImageFrame
-          frameSize="medium"
-          imageScource="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
-          frameText="New York"
-        />
-        <CircularImageFrame
-          frameSize="medium"
-          imageScource="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
-          frameText="New York"
-        />
-        <CircularImageFrame
-          frameSize="medium"
-          imageScource="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
-          frameText="New York"
-        />
+        {cities.map((city) => (
+          <CircularImageFrame
+            key={city.id}
+            frameSize="medium"
+            imageScource={city.imageUrl}
+            frameText={city.cityName}
+            onClick={() => navigate(`/city-offer/${city.id}`)}
+          />
+        ))}
       </div>
     </div>
   );

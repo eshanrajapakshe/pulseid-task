@@ -7,9 +7,9 @@
   height: 100vh;
   position: relative;
   background-image: linear-gradient(
-      to bottom,
-      rgb(245 246 252 / 13%),
-      rgb(0 0 0)
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 70%
     ),
     var(--img);
   background-position: center;
@@ -50,7 +50,7 @@
 }
 
 .gesture-area {
-  height: calc(100% - 180px);
+  height: calc(100% - 240px);
   width: 100%;
 }
 
@@ -78,6 +78,26 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(96, 89, 84, 0.48);
+}
+
+.thumbnail-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin: 16px 0 32px 0;
+
+  .dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: #d0d0d0;
+  }
+
+  .active-dot {
+    background-color: #ff9800;
+  }
 }
 
 .story-description {

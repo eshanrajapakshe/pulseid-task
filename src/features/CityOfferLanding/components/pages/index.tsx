@@ -1,20 +1,41 @@
 import { Button, Typography } from '../../../../components';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../../redux/store';
 import { IoIosArrowBack } from 'react-icons/io';
 import { ExploreCityCategory, SpecialOffersSlider } from '../molecules';
-
 import './styles.scss';
-import { useNavigate } from 'react-router-dom';
 
 export const CityOfferLanding = () => {
   const navigate = useNavigate();
+  const { cityId } = useParams<{ cityId: string }>();
+
+  const cityData = useSelector((state: RootState) =>
+    state.discover.cities.find((city) => city.id === Number(cityId)),
+  );
+
+  if (!cityData) {
+    return (
+      <div className="city-offer-landing-page">
+        <Typography variant="h6-2" customClassName="city-not-found">
+          City not found
+        </Typography>
+        <Button
+          type="link"
+          label="Go Back"
+          onClick={() => navigate('/')}
+          className="back-button"
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="city-offer-landing-page">
       <div
         className="city-offer-hero"
         style={{
-          backgroundImage:
-            'url(https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg)',
+          backgroundImage: `url(${cityData.imageUrl})`,
         }}
       >
         <Button
@@ -24,7 +45,7 @@ export const CityOfferLanding = () => {
           onClick={() => navigate('/')}
         />
         <Typography variant="h6-2" customClassName="m-0 city-offer-title">
-          Tokyo
+          {cityData.cityName}
         </Typography>
       </div>
 

@@ -4,20 +4,8 @@ import { useSwipeable } from 'react-swipeable';
 import { Button, Typography } from '../../../../../components';
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import { IoIosArrowBack } from 'react-icons/io';
+import { images } from '../../../data/images';
 import './styles.scss';
-
-const images = [
-  'https://picsum.photos/200/300?random=1',
-  'https://picsum.photos/200/300?random=2',
-  'https://picsum.photos/200/300?random=3',
-  'https://picsum.photos/200/300?random=4',
-  'https://picsum.photos/200/300?random=5',
-  'https://picsum.photos/200/300?random=6',
-  'https://picsum.photos/200/300?random=7',
-  'https://picsum.photos/200/300?random=8',
-  'https://picsum.photos/200/300?random=9',
-  'https://picsum.photos/200/300?random=10',
-];
 
 export const CityOfferDetail = () => {
   const navigate = useNavigate();
@@ -93,7 +81,7 @@ export const CityOfferDetail = () => {
           type="icon"
           icon={<IoIosArrowBack />}
           className="navigate-button"
-          onClick={() => navigate('/city-offer')}
+          onClick={() => navigate(-1)}
         />
 
         <Typography variant="h6-2" customClassName="story-title">
@@ -157,6 +145,15 @@ export const CityOfferDetail = () => {
           Enjoy an instant <strong>10% discount</strong> on purchases of ¥8,000
           with your card.
         </Typography>
+      </div>
+
+      <div className="thumbnail-dots">
+        {images.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${index === currentIndex ? 'active-dot' : ''}`}
+          />
+        ))}
       </div>
     </div>
   );
