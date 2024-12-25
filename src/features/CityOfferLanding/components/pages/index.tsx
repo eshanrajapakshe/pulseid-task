@@ -1,5 +1,6 @@
-import { Button, Typography } from '../../../../components';
+import { CSSProperties } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { Button, Typography } from '../../../../components';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../../redux/store';
 import { IoIosArrowBack } from 'react-icons/io';
@@ -34,9 +35,11 @@ export const CityOfferLanding = () => {
     <div className="city-offer-landing-page">
       <div
         className="city-offer-hero"
-        style={{
-          backgroundImage: `url(${cityData.imageUrl})`,
-        }}
+        style={
+          { '--img': `url('${cityData.imageUrl}')` } as CSSProperties & {
+            [key: string]: string;
+          }
+        }
       >
         <Button
           type="icon"
