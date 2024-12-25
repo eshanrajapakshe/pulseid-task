@@ -1,12 +1,10 @@
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import { Typography } from '../../../../../components';
 import { Carousel } from '../../atoms/Carousel';
 import { OfferCard } from '../OfferCard';
 import { RootState } from '../../../../../redux/store';
 
 export const OfferCarousel = () => {
-  const navigate = useNavigate();
   const { stores } = useSelector((state: RootState) => state.discover);
 
   const slides = stores.map((store) => (
@@ -17,7 +15,6 @@ export const OfferCarousel = () => {
       rate={store.rate}
       reviewCount={store.reviewCount}
       storeImage={store.storeImage}
-      // onNavigate={() => navigate(`/city-offer-details/${store.id}`)}
     />
   ));
 

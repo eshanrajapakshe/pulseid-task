@@ -1,3 +1,5 @@
+@import '../../../../../styles/breakpoints';
+
 .story-view-container {
   display: flex;
   flex-direction: column;
@@ -16,6 +18,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding: 16px;
+
+  @include respond-to('md') {
+    align-items: center;
+  }
 }
 
 .story-header {
@@ -60,6 +66,11 @@
   border-radius: 8px;
   object-fit: cover;
   cursor: pointer;
+
+  @include respond-to('xs-380', 'max') {
+    height: 30px;
+    width: 30px;
+  }
 }
 
 .active-thumbnail {
@@ -78,6 +89,11 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(96, 89, 84, 0.48);
+
+  @include respond-to('xs-380', 'max') {
+    height: 30px;
+    width: 30px;
+  }
 }
 
 .thumbnail-dots {
@@ -106,6 +122,10 @@
     gap: 12px;
     align-items: center;
 
+    @include respond-to('md') {
+      justify-content: center;
+    }
+
     img {
       width: 24px;
       height: 24px;
@@ -129,6 +149,10 @@
 
     strong {
       font-weight: 700;
+    }
+
+    @include respond-to('md') {
+      text-align: center;
     }
   }
 }

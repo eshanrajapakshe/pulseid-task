@@ -1,8 +1,14 @@
 @import '../../../../../styles/colors';
+@import '../../../../../styles/breakpoints';
 
 .discover-city-wrapper {
   margin: 24px 0;
   padding: 0 16px;
+  background-color: #fffcf8;
+
+  @include respond-to('md') {
+    @include container;
+  }
 
   .discover-city-header {
     display: flex;

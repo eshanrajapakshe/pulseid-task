@@ -1,4 +1,6 @@
 $breakpoints: (
+  'xxs': 360px,
+  'xs-380': 380px,
   'xs': 576px,
   'sm': 768px,
   'md': 1024px,
@@ -6,13 +8,25 @@ $breakpoints: (
   'xl': 1440px,
 );
 
-@mixin respond-to($breakpoint) {
+@mixin respond-to($breakpoint, $type: 'min') {
   $breakpoint-value: map-get($breakpoints, $breakpoint);
   @if $breakpoint-value {
-    @media (min-width: #{$breakpoint-value}) {
-      @content;
+    @if $type == 'min' {
+      @media (min-width: #{$breakpoint-value}) {
+        @content;
+      }
+    } @else if $type == 'max' {
+      @media (max-width: #{$breakpoint-value}) {
+        @content;
+      }
     }
   } @else {
     @warn "No value found for breakpoint: #{$breakpoint}";
   }
+}
+
+@mixin container {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
 }

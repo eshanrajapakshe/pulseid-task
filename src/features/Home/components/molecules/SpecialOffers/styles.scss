@@ -1,9 +1,14 @@
 @import '../../../../../styles/colors';
+@import '../../../../../styles/breakpoints';
 
 .special-offer-wrapper {
   margin-top: 24px;
   margin-bottom: 24px;
   padding: 0 16px;
+
+  @include respond-to('md') {
+    @include container;
+  }
 
   .special-offer-title {
     margin-bottom: 16px;
@@ -12,6 +17,10 @@
   .special-offer-card {
     display: flex;
     justify-content: space-between;
+
+    @include respond-to('md') {
+      max-width: 380px;
+    }
 
     .special-offer-content {
       width: 44%;

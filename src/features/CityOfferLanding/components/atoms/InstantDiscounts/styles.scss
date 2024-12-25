@@ -1,12 +1,23 @@
+@import '../../../../../styles/breakpoints';
+
 .instant-discounts-wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   row-gap: 24px;
   column-gap: 16px;
   padding: 0 16px;
 
   .instant-discounts-item {
     width: calc(100% / 2 - 8px);
+
+    @include respond-to('md') {
+      width: calc(100% / 3 - 12px);
+    }
+
+    @include respond-to('xxs', 'max') {
+      width: 100%;
+    }
 
     .instant-discounts-tile {
       min-height: 162px;
@@ -68,6 +79,10 @@
           color: #ffffff;
           font-size: 10px;
           font-weight: 500;
+
+          @include respond-to('md') {
+            font-size: 12px;
+          }
         }
       }
 
@@ -94,6 +109,10 @@
       color: #000000;
       font-weight: 500;
       line-height: 12px;
+
+      @include respond-to('md') {
+        font-size: 12px;
+      }
 
       ul {
         padding: 0 0 0 16px;

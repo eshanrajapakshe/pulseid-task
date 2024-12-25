@@ -81,41 +81,6 @@ export const InstantDiscounts = ({ offersData }: IProps) => {
           </div> */}
         </div>
       ))}
-
-      {/* <div className="instant-discounts-item">
-        <div className="instant-discounts-tile" style={dynamicStyle}>
-          <div className="add-favorite">
-            <button type="button" onClick={toggleFavorite}>
-              {isFavorite ? <AiFillHeart color="red" /> : <AiOutlineHeart />}
-            </button>
-          </div>
-
-          <div
-            className="merchant-info-wrapper"
-            onClick={() => navigate('/city-offer-details/1')}
-            role="button"
-          >
-            <div className="merchant-info">
-              <img
-                src="https://cdn3.pixelcut.app/7/20/uncrop_hero_bdf08a8ca6.jpg"
-                alt=""
-              />
-              <Typography variant="p" customClassName="m-0 merchant-name">
-                Explore Tokyo’s best category
-              </Typography>
-            </div>
-          </div>
-        </div>
-
-        <Typography variant="p" customClassName="discount-description">
-          Get Instant discounts with card
-        </Typography>
-
-        <div className="product-types">
-          <Badge type="secondary" text="Dessert" />
-          <Badge type="primary" text="Exclusive" />
-        </div>
-      </div> */}
     </div>
   );
 };

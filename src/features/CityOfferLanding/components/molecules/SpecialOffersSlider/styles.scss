@@ -1,7 +1,12 @@
 @import '../../../../../styles/colors';
+@import '../../../../../styles/breakpoints';
 
 .offer-slider-wrapper {
   margin-bottom: calc(24px + 15px);
+
+  @include respond-to('md') {
+    @include container;
+  }
 
   .slick-dots {
     bottom: -15px;
