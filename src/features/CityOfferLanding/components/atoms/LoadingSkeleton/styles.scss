@@ -1,5 +1,11 @@
+@import '../../../../../styles/breakpoints';
+
 .loading-skeleton {
   padding: 16px;
+
+  @include respond-to('md') {
+    @include container;
+  }
 
   .horizontal-boxes {
     display: grid;

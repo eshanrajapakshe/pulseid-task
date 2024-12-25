@@ -17,7 +17,7 @@ export const LoadingSkeleton = () => {
       </div>
 
       <div className="grid-boxes">
-        {Array.from({ length: 4 }).map((_, index) => (
+        {Array.from({ length: 6 }).map((_, index) => (
           <Skeleton
             key={index}
             height={120}

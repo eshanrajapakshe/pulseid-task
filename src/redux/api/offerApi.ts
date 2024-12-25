@@ -25,7 +25,7 @@ export const offerApi = createApi({
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve({ data: mockOffers });
-      }, 500);
+      }, 1500);
     });
   },
   endpoints: (builder) => ({

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useGetOffersQuery } from '../../../../../redux/api/offerApi';
-import { Typography } from '../../../../../components';
+import { Alert, Typography } from '../../../../../components';
 import { CategoryFilter, InstantDiscounts, LoadingSkeleton } from '../../atoms';
 import { FilterType } from '../../../../../types/filter';
 
@@ -12,7 +12,13 @@ export const ExploreCityCategory = () => {
   ]);
 
   if (isLoading) return <LoadingSkeleton />;
-  if (error) return <div>Error occurred: {JSON.stringify(error)}</div>;
+  if (error)
+    return (
+      <Alert
+        type="error"
+        message={`Error occurred: ${JSON.stringify(error)}`}
+      />
+    );
 
   const filteredOffers =
     activeFilters.includes(FilterType.All) || activeFilters.length === 0
