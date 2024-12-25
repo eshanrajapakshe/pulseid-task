@@ -1,4 +1,4 @@
-import { Header } from '../../../../components';
+import { Header, ThemeToggle } from '../../../../components';
 import { DiscoverCity, SpecialOffers } from '../molecules';
 import { OfferCarousel } from '../molecules/OfferCarousel';
 
@@ -9,6 +9,8 @@ export const Home = () => {
       <DiscoverCity />
       <OfferCarousel />
       <SpecialOffers />
+
+      <ThemeToggle />
     </>
   );
 };

@@ -1,10 +1,17 @@
 @import '../../../../../styles/colors';
 @import '../../../../../styles/breakpoints';
 
+:root {
+  --t-color: $gray-2;
+}
+
+[data-theme='dark'] {
+  --t-color: #ffffff;
+}
+
 .discover-city-wrapper {
   margin: 24px 0;
   padding: 0 16px;
-  background-color: #fffcf8;
 
   @include respond-to('md') {
     @include container;
@@ -42,7 +49,7 @@
     .circle-image-frame > p {
       margin: 8px 0 0 0;
       text-align: center;
-      color: $gray-2;
+      color: var(--t-color);
       font-weight: 500;
     }
   }

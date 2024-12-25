@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { Button, Typography } from '../../../../components';
+import { Button, ThemeToggle, Typography } from '../../../../components';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../../redux/store';
 import { IoIosArrowBack } from 'react-icons/io';
@@ -60,6 +60,8 @@ export const CityOfferLanding = () => {
         <SpecialOffersSlider />
         <ExploreCityCategory />
       </div>
+
+      <ThemeToggle />
     </div>
   );
 };

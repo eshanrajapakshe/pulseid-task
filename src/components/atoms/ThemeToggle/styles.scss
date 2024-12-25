@@ -1,0 +1,27 @@
+@import '../../../styles/colors';
+
+:root {
+  --bg-color: #333;
+}
+
+[data-theme='dark'] {
+  --bg-color: #ffffff;
+}
+
+.theme-toggle {
+  outline: none;
+  border: none;
+  background-color: var(--bg-color);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  font-size: 18px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
