@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { IOffer } from '../../types/offers';
+import { IOffersData } from '../../types/offers';
 
 // to be removed
 import { mockOffers } from '../../features/Home/redux/mock';
@@ -29,7 +29,7 @@ export const offerApi = createApi({
     });
   },
   endpoints: (builder) => ({
-    getOffers: builder.query<IOffer[], void>({
+    getOffers: builder.query<IOffersData, void>({
       query: () => '/offer',
     }),
   }),

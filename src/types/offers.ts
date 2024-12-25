@@ -47,6 +47,14 @@ export interface IOffer {
   tncText: string | null;
 }
 
+export interface IOffersData {
+  offers: IOffer[];
+  totalCount: number;
+  pageCount: number;
+  limit: number;
+  page: number;
+}
+
 export interface IMerchant {
   id: number;
   name: string;

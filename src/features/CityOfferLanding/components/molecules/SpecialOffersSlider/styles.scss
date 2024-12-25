@@ -27,6 +27,9 @@
   }
 
   .city-offer-card {
+    display: flex;
+    justify-content: space-between;
+
     .offer-provider {
       display: flex;
       align-items: center;
@@ -56,6 +59,23 @@
 
     .offer-card-button {
       margin-top: 16px;
+    }
+
+    .special-offer-image {
+      position: relative;
+      background-image: url('../../../../../assets/images/card-vector.svg');
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: contain;
+      width: 45%;
+
+      img {
+        height: calc(100% + 28px);
+        width: auto;
+        position: absolute;
+        right: 0;
+        bottom: -16px;
+      }
     }
   }
 }

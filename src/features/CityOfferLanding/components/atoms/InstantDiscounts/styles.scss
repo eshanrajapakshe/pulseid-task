@@ -89,6 +89,16 @@
 
     .discount-description {
       margin: 8px 0;
+      font-size: 8px;
+      line-height: 16px;
+      color: #000000;
+      font-weight: 500;
+      line-height: 12px;
+
+      ul {
+        padding: 0 0 0 16px;
+        margin: 0;
+      }
     }
 
     .product-types {

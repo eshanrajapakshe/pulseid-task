@@ -14,7 +14,14 @@ export const ExploreCityCategory = () => {
   if (isLoading) return <LoadingSkeleton />;
   if (error) return <div>Error occurred: {JSON.stringify(error)}</div>;
 
-  console.log(data);
+  const filteredOffers =
+    activeFilters.includes(FilterType.All) || activeFilters.length === 0
+      ? data?.offers
+      : data?.offers.filter((offer) =>
+          activeFilters.some(
+            (filter) => offer.merchant?.category?.name === filter,
+          ),
+        );
 
   const handleFilterClick = (value: FilterType) => {
     setActiveFilters((prevFilters) =>
@@ -35,7 +42,7 @@ export const ExploreCityCategory = () => {
         onClick={handleFilterClick}
       />
 
-      <InstantDiscounts />
+      {filteredOffers && <InstantDiscounts offersData={filteredOffers} />}
     </div>
   );
 };

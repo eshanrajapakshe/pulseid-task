@@ -4,6 +4,10 @@
   display: flex;
   gap: 8px;
   overflow: auto;
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.90);
 
   .filter-item {
     padding: 6px 12px 6px 6px;

@@ -4,8 +4,8 @@ import { FaRegCircleCheck } from 'react-icons/fa6';
 import { BiSprayCan } from 'react-icons/bi';
 import { BiCheese } from 'react-icons/bi';
 import { CgShoppingCart } from 'react-icons/cg';
-import { GiAmpleDress } from 'react-icons/gi';
-import { GiHealthNormal } from 'react-icons/gi';
+import { BsShop } from 'react-icons/bs';
+import { IoRestaurant } from 'react-icons/io5';
 import { FilterType } from '../../../../../types/filter';
 import './styles.scss';
 
@@ -17,11 +17,11 @@ interface IFilterProps {
 export const CategoryFilter = ({ onClick, activeFilters }: IFilterProps) => {
   const filters = [
     { label: FilterType.All, icon: <FaRegCircleCheck /> },
+    { label: FilterType.Retailers, icon: <BsShop /> },
+    { label: FilterType.Restaurants, icon: <IoRestaurant /> },
     { label: FilterType.Dessert, icon: <BiCheese /> },
     { label: FilterType.Beauty, icon: <BiSprayCan /> },
     { label: FilterType.RetailStore, icon: <CgShoppingCart /> },
-    { label: FilterType.Fashion, icon: <GiAmpleDress /> },
-    { label: FilterType.Health, icon: <GiHealthNormal /> },
   ];
 
   return (

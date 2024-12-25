@@ -3,6 +3,6 @@ export enum FilterType {
   Dessert = 'Dessert',
   Beauty = 'Beauty',
   RetailStore = 'Retail Store',
-  Fashion = 'Fashion',
-  Health = 'Health',
+  Retailers = 'Retailers',
+  Restaurants = 'Restaurants',
 }
