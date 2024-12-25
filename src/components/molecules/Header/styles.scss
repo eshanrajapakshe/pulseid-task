@@ -1,53 +1,58 @@
 @import '../../../styles/colors';
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px;
+  background-color: #ffffff;
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
-  background: rgb(255, 152, 0);
-  background: radial-gradient(
-    circle,
-    rgb(255 152 0 / 30%) 50%,
-    rgba(255, 152, 0, 0.18) 100%
-  );
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
-  .brand-wrapper {
-    height: 28px;
-    width: auto;
-
-    .logo-img {
-      height: 100%;
-      width: auto;
-    }
-  }
-
-  .user-wrapper {
+  .header-wrapper {
     display: flex;
     align-items: center;
-    gap: 16px;
+    justify-content: space-between;
+    padding: 16px;
 
-    .user-info {
-      text-align: right;
+    background: rgb(255, 152, 0);
+    background: radial-gradient(
+      circle,
+      rgb(255 152 0 / 30%) 50%,
+      rgba(255, 152, 0, 0.18) 100%
+    );
 
-      .user-name {
-        margin: 0 0 4px 0;
-        padding: 0;
-        font-weight: 500;
-        color: $black;
+    .brand-wrapper {
+      height: 28px;
+      width: auto;
+
+      .logo-img {
+        height: 100%;
+        width: auto;
       }
+    }
 
-      .user-greetings {
-        margin: 0;
-        padding: 0;
-        font-weight: 400;
-        color: $beige-1;
+    .user-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      .user-info {
+        text-align: right;
+
+        .user-name {
+          margin: 0 0 4px 0;
+          padding: 0;
+          font-weight: 500;
+          color: $black;
+        }
+
+        .user-greetings {
+          margin: 0;
+          padding: 0;
+          font-weight: 400;
+          color: $beige-1;
+        }
       }
     }
   }
