@@ -24,6 +24,7 @@ export const CircularImageFrame = ({
           src={imageScource}
           alt="pic"
           className={classNames('avatar', className)}
+          loading="lazy"
         />
       </div>
 

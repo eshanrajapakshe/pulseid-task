@@ -1,13 +1,13 @@
 import { CSSProperties } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { Button, ThemeToggle, Typography } from '../../../../components';
+import { Button, ThemeToggle, Typography } from '../../../components';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../../../redux/store';
+import { RootState } from '../../../redux/store';
 import { IoIosArrowBack } from 'react-icons/io';
-import { ExploreCityCategory, SpecialOffersSlider } from '../molecules';
+import { ExploreCityCategory, SpecialOffersSlider } from '../components/molecules';
 import './styles.scss';
 
-export const CityOfferLanding = () => {
+const CityOfferLanding = () => {
   const navigate = useNavigate();
   const { cityId } = useParams<{ cityId: string }>();
 
@@ -65,3 +65,5 @@ export const CityOfferLanding = () => {
     </div>
   );
 };
+
+export default CityOfferLanding;

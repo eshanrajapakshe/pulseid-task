@@ -1,13 +1,13 @@
 import { CSSProperties, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSwipeable } from 'react-swipeable';
-import { Button, Typography } from '../../../../../components';
+import { Button, Typography } from '../../../components';
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import { IoIosArrowBack } from 'react-icons/io';
-import { images } from '../../../data/images';
+import { images } from '../data/images';
 import './styles.scss';
 
-export const CityOfferDetail = () => {
+const CityOfferDetail = () => {
   const navigate = useNavigate();
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -158,3 +158,5 @@ export const CityOfferDetail = () => {
     </div>
   );
 };
+
+export default CityOfferDetail;

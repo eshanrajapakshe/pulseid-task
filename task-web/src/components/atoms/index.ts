@@ -7,3 +7,4 @@ export * from './Tooltip';
 export * from './Alert';
 export * from './ErrorBoundary';
 export * from './ThemeToggle';
+export * from './Spinner';
